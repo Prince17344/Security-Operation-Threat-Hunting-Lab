@@ -1,0 +1,5 @@
+index=main sourcetype=soc_lab (EventCode=4624 OR EventCode=4625)
+| sort 0 src_ip user _time
+| streamstats count(eval(EventCode=4625)) AS prior_failures by src_ip user
+| where EventCode=4624 AND prior_failures>=5
+| table _time EventCode src_ip user prior_failures

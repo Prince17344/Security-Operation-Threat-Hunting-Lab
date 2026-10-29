@@ -50,7 +50,9 @@ The queries use `index=main` and `sourcetype=soc_lab`. Update these values if yo
 
 ## Detection Evidence
 
+![Brute-force detection](screenshots/brute_force_detection.png)
 
+![Successful login correlation](screenshots/successful_login_correlation.png)
 
 ## Project Limitations
 

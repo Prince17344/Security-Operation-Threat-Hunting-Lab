@@ -1,0 +1,5 @@
+index=main sourcetype=soc_lab EventCode=4625
+| bin _time span=5m
+| stats count AS failed_attempts by _time src_ip user
+| where failed_attempts >= 5
+| sort 0 _time

@@ -1,0 +1,3 @@
+index=main sourcetype=soc_lab EventCode=4625
+| stats count AS failed_attempts by src_ip user
+| sort - failed_attempts
